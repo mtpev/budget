@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- EDIT: replace APP_NAME everywhere in this file (4 places) -->
+    <title>mybudget</title>
+    <meta name="description" content="mybudget is a personal budgeting tool used only by its developer.">
+    <style>
+        :root {
+            --paper: #eef2f0;
+            --ink: #1d2b3a;
+            --muted: #52606d;
+            --rule: #c5d0cb;
+            --accent: #2c6a5f;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --paper: #17202a;
+                --ink: #e3e9e6;
+                --muted: #a3b0ab;
+                --rule: #33424d;
+                --accent: #7fc0b2;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+            font-size: 1.125rem;
+            line-height: 1.65;
+        }
+
+        main {
+            max-width: 38rem;
+            margin: 0 auto;
+            padding: 4rem 1.5rem 5rem;
+        }
+
+        header {
+            border-left: 4px solid var(--accent);
+            padding-left: 1.25rem;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.15;
+            font-weight: 700;
+            margin: 0 0 0.5rem;
+        }
+
+        header p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 1.2rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            margin: 2.5rem 0 0.5rem;
+        }
+
+        p,
+        ul {
+            margin: 0 0 1rem;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+        }
+
+        li {
+            margin-bottom: 0.35rem;
+        }
+
+        a {
+            color: var(--accent);
+            text-underline-offset: 0.15em;
+        }
+
+        a:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        footer {
+            margin-top: 3.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--rule);
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>mybudget</h1>
+            <p>A personal budgeting tool, built and used by one person for their own accounts.</p>
+        </header>
+
+        <h2>What it is</h2>
+        <p>
+            mybudget is a private, non-commercial project. It downloads my own bank
+            transactions so I can categorize my spending. It has no other users,
+            is not offered to the public, and has no accounts to sign up for.
+        </p>
+
+        <h2>What data it uses</h2>
+        <p>Through Plaid, and only for accounts I connect myself, it reads:</p>
+        <ul>
+            <li>Account names, types, and the last four digits of account numbers</li>
+            <li>Transactions: date, amount, description, merchant, and category</li>
+        </ul>
+        <p>It does not move money, and it cannot make payments or transfers.</p>
+
+        <h2>How the data is stored</h2>
+        <p>
+            Data is stored in a local database on my own computer, with file access
+            restricted to my user account. It is not uploaded to any server or cloud service.
+        </p>
+
+        <h2>Sharing</h2>
+        <p>
+            The data is never sold, shared, or used for advertising. No one other than
+            me has access to it.
+        </p>
+
+        <h2>Disconnecting</h2>
+        <p>
+            I can remove a bank connection at any time through the app, through my bank,
+            or through <a href="https://my.plaid.com/">Plaid Portal</a>. Removing a
+            connection stops all further data access for that account.
+        </p>
+
+        <h2>Contact</h2>
+        <!-- EDIT: replace both occurrences of you@example.com with your email -->
+        <p>
+            Questions about this app or its data practices:
+            <a href="mailto:spaceman254254@gmail.com">spaceman254254@gmail.com</a>
+        </p>
+
+        <!-- EDIT: set the date when you publish or change this page -->
+        <footer>Last updated September 30, 2026</footer>
+    </main>
+</body>
+
+</html>
